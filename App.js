@@ -26,11 +26,7 @@ export default function App() {
             onChangeText={(text) => setPassword(text)}
           />
         </View>
-        <Button
-          icon="login"
-          mode="contained"
-          onPress={() => console.log("Pressed")}
-        >
+        <Button icon="login" mode="contained" onPress={() => alert(username)}>
           LOGIN
         </Button>
       </View>
@@ -44,11 +40,9 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "red",
   },
   headerContainer: {
     flex: 0.5,
-    backgroundColor: "yellow",
     justifyContent: "center",
     alignItems: "center",
   },
