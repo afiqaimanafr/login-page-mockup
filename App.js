@@ -4,6 +4,7 @@ import { Avatar, TextInput } from "react-native-paper";
 
 export default function App() {
   const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
@@ -13,7 +14,7 @@ export default function App() {
       <View style={styles.bodyContainer}>
         <Text style={styles.loginText}>Login</Text>
         <View>
-          <TextInput label="Username" />
+          <TextInput label="Username" value={username} />
           <TextInput label="Password" />
         </View>
       </View>
