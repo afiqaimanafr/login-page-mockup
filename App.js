@@ -1,8 +1,9 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { Avatar } from "react-native-paper";
+import { Avatar, TextInput } from "react-native-paper";
 
 export default function App() {
+  const [username, setUsername] = useState("");
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
@@ -11,6 +12,10 @@ export default function App() {
       </View>
       <View style={styles.bodyContainer}>
         <Text style={styles.loginText}>Login</Text>
+        <View>
+          <TextInput label="Username" />
+          <TextInput label="Password" />
+        </View>
       </View>
       <View style={styles.footerContainer}>
         <Text>Footer</Text>
