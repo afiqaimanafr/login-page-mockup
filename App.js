@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { Avatar, TextInput } from "react-native-paper";
+import { Avatar, TextInput, Button } from "react-native-paper";
 
 export default function App() {
   const [username, setUsername] = useState("Admin");
@@ -26,6 +26,13 @@ export default function App() {
             onChangeText={(text) => setPassword(text)}
           />
         </View>
+        <Button
+          icon="login"
+          mode="contained"
+          onPress={() => console.log("Pressed")}
+        >
+          LOGIN
+        </Button>
       </View>
       <View style={styles.footerContainer}>
         <Text>Footer</Text>
