@@ -3,19 +3,28 @@ import { StyleSheet, Text, View } from "react-native";
 import { Avatar, TextInput } from "react-native-paper";
 
 export default function App() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("Admin");
+  const [password, setPassword] = useState("Password");
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
-        <Text>Header</Text>
         <Avatar.Image size={200} source={require("./assets/favicon.png")} />
+        <Text>Username: {username}</Text>
+        <Text>Password: {password}</Text>
       </View>
       <View style={styles.bodyContainer}>
         <Text style={styles.loginText}>Login</Text>
         <View>
-          <TextInput label="Username" value={username} />
-          <TextInput label="Password" />
+          <TextInput
+            label="Username"
+            value={username}
+            onChangeText={(text) => setUsername(text)}
+          />
+          <TextInput
+            label="Password"
+            value={password}
+            onChangeText={(text) => setPassword(text)}
+          />
         </View>
       </View>
       <View style={styles.footerContainer}>
